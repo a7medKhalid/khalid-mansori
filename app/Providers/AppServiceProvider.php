@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        //unguarding models
+        \Illuminate\Database\Eloquent\Model::unguard();
     }
 }
