@@ -26,7 +26,7 @@ class ArticleResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->autofocus()
                     ->required()
-                    ->unique(Article::class, 'title')
+                    ->unique(Article::class, 'title', ignoreRecord: true)
                     ->placeholder(__('Title'))
                     ->columnSpanFull(),
                 Forms\Components\RichEditor::make('body')
