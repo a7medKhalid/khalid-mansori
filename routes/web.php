@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/blog', function () {
     $articles = App\Models\Article::all();
     return view('welcome', ['articles' => $articles]);
+});
+
+Route::get('/', function () {
+    return view('livewire.landing');
 });
