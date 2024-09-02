@@ -18,6 +18,4 @@ Route::get('/blog', function () {
     return view('welcome', ['articles' => $articles]);
 });
 
-Route::get('/', function () {
-    return view('livewire.landing');
-});
+Route::get('/', \App\Livewire\LandingPage::class);
