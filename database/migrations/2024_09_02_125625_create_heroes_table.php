@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image_path')->nullable();
-            $table->boolean('is_active')->default(true);
+            $table->boolean('isActive')->default(true);
+            $table->unsignedInteger('order');
+
         });
     }
 

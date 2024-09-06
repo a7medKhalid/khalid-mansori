@@ -17,6 +17,7 @@ return new class extends Migration
 
             $table->string('title');
             $table->string('image_path')->nullable();
+            $table->unsignedInteger('order');
 
             $table->foreignId('service_category_id')->constrained();
         });

@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('image_path')->nullable();
-            $table->boolean('is_leader')->default(false);
+            $table->unsignedInteger('order');
+            $table->boolean('isLeader')->default(false);
 
 
         });
