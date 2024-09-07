@@ -16,7 +16,7 @@
         </div>
 
         <div class="w-full md:w-2/3 flex justify-center items-center mt-8 md:mt-0">
-            <img class="hidden md:block max-w-full h-auto object-cover rounded-lg" src="{{ $hero->image_path }}" alt="Logo" />
+            <img class="hidden md:block max-w-full h-auto object-cover rounded-lg" src="{{ asset($hero->image_path) }}" alt="Logo" />
         </div>
     </div>
 
@@ -47,7 +47,7 @@
                 رئيس بيت الخبرة
             </h2>
             <div class="mt-8 md:mt-12 flex flex-col items-center md:flex-row">
-                <img class="w-2/3 md:w-1/3 ml-4 rounded-full shadow border" src="{{ $leader->image_path }}" alt="" />
+                <img class="w-2/3 md:w-1/3 ml-4 rounded-full shadow border" src="{{ asset($leader->image_path) }}" alt="" />
                 <div class="mt-8 md:mt-24 text-center md:text-right">
                     <h3 class="font-bold text-4xl md:text-6xl">
                         {{ $leader->name }}
@@ -67,7 +67,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 mt-8 md:mt-12">
                 @foreach($experts as $expert)
                     <div class="flex flex-col items-center mt-8 md:mt-12">
-                        <img class="w-2/3 rounded-full shadow border" src="{{ $expert['image_path'] }}" alt="" />
+                        <img class="w-2/3 rounded-full shadow border" src="{{ asset($expert['image_path'] )}}" alt="" />
                         <div class="text-center mt-8 md:mt-12">
                             <h3 class="font-bold text-2xl md:text-4xl">
                                 {{ $expert['name'] }}
@@ -95,7 +95,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-4 mt-4">
                             @foreach($servicesCategory['services'] as $service)
                                 <div class="mt-4 md:mt-0">
-                                    <img src="{{$service['title']}}" alt="" />
+                                    <img src="{{ asset($service['title']) }}" alt="" />
                                     <p>
                                         {{ $service['title'] }}
                                     </p>
